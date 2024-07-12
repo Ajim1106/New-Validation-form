@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation Assignment </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="validation.js"></script>
+</head>
+<body>
+    <!-- // right now we dont have server, we put sample server name only (i.e in action ="abc.php") -->
+
+    <form action="abc.php" method="post" name="contactForm" onsubmit="return validateForm()">
+
+        <h2 >Application Form</h2>
+        <div class="row">
+            <label >Full Name</label>
+            <input type="text" name="name" id="">
+            <div class="error" id="nameerror"></div>
+        </div>
+
+        <div class="row">
+            <label >Email Adress</label>
+            <input type="text" name="email" id="">
+            <div class="error" id="emailerror"></div>
+        </div>
+
+        <div class="row">
+            <label >Mobile Number</label>
+            <input type="text" name="mobile"  maxlength="10">
+            <div class="error" id="mobileerror"></div>
+        </div>
+
+        <div class="row">
+            <label >Country</label>
+            <select name="country" >
+                <option >select</option>
+                <option >India</option>
+                <option >Japan</option>
+                <option >England</option>
+                <option >USA</option>
+                <option >Russia</option>
+                <option >China</option>
+                <option >UK</option>
+            </select>
+            <div class="error" id="countryerror"></div>
+        </div>
+
+        <div class="row">
+            <label >Gender</label>
+            <div class="form-inline" id="">
+                <label ><input type="radio" name="gender" value="male" id="">Male</label>
+
+                <label ><input type="radio" name="gender" value="female" id="">Female</label>
+            </div>
+            <div class="error" id="gendererror"></div>
+        </div>
+
+        <div class="row">
+            <label >Hobbies <i>(Optional)</i></label>
+
+            <div class="form-inline" id="">
+                <label ><input type="checkbox" name="hobbies[]" value="sports" id="">Sports</label>
+
+                <label ><input type="checkbox" name="hobbies[]" value="Movies" id="">Movies</label>
+
+                <label ><input type="checkbox" name="hobbies[]" value="Music" id="">Music</label>
+            </div>
+        </div>
+        
+        <div class="row">
+            <input type="submit" value="submit">
+        </div>
+
+
+
+
+
+
+    </form>
+    
+</body>
+</html>

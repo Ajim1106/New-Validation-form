@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alternation     </title>
+</head>
+<body>
+    <script>
+        var regex = /dog|fox|cat/;
+
+        var str = "the quick cat and brown fox jump over the lazy dog";
+
+        var result = str.match(regex);
+
+        document.write("Matches the substring: "+result);
+    </script>
+
+    
+</body>
+</html>
